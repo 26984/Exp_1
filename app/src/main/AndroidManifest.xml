@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.demo3">
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- 定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/apple"
+        android:label="果香寻踪"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="Oue50HIm8HyLqe9iplpyyu9phbJUddev" />
+
+        <!-- 登录页（启动页） -->
+        <activity
+            android:name=".LoginActivity"
+            android:label="登录"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 注册页 -->
+        <activity
+            android:name=".RegisterActivity"
+            android:label="注册"
+            android:exported="false" />
+
+        <!-- 地图页 -->
+        <activity
+            android:name=".MapActivity"
+            android:label="果园地图"
+            android:exported="false" />
+
+        <!-- 列表页 -->
+        <activity
+            android:name=".ListActivity"
+            android:label="周边采摘园"
+            android:exported="false" />
+
+        <!-- 详情页 -->
+        <activity
+            android:name=".DetailActivity"
+            android:label="采摘园详情"
+            android:exported="false" />
+
+        <!-- 收藏页 -->
+        <activity
+            android:name=".FavoriteActivity"
+            android:label="我的收藏"
+            android:exported="false" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:exported="true" />
+    </application>
+</manifest>

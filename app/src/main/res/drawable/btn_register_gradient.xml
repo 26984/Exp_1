@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 按下时 -->
+    <item android:state_pressed="true">
+        <shape>
+            <gradient
+                android:startColor="#B8E7B9"
+                android:endColor="#42CC4A"
+                android:angle="135" />
+        </shape>
+    </item>
+    <!-- 正常状态 -->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#B4E6B4"
+                android:endColor="#46B34B"
+                android:angle="135" />
+        </shape>
+    </item>
+</selector>
